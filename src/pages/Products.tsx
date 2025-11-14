@@ -151,7 +151,7 @@ export default function Products() {
   return (
     <DashboardLayout>
       <div className="max-w-6xl">
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8 gap-4">
           <div>
             <h1 className="text-3xl font-bold mb-2">Meus Produtos</h1>
             <p className="text-muted-foreground">
@@ -159,7 +159,7 @@ export default function Products() {
             </p>
           </div>
           <Dialog open={isOpen} onOpenChange={handleOpenChange}>
-            <DialogTrigger asChild>
+            <DialogTrigger asChild className='w-full md:w-auto'>
               <Button>
                 <Plus className="mr-2 h-4 w-4" />
                 Novo Produto

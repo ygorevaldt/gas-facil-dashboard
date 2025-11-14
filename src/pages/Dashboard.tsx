@@ -73,8 +73,8 @@ export default function Dashboard() {
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <Card>
-            <CardHeader className='flex flex-row items-start justify-between'>
-              <div>
+            <CardHeader className='flex sm:flex-row flex-col items-start justify-between'>
+              <div className='flex gap-2 flex-col'>
                 <CardTitle>Dados Pessoais</CardTitle>
                 <CardDescription>
                   Informações básicas da sua conta
@@ -84,9 +84,9 @@ export default function Dashboard() {
               <Link
                 key={'Atualizar senha'}
                 to={'/dashboard/update-password'}
-                className={''}
+                className={'m-0 p-0'}
               >
-                <span className="text-sm text-blue-800">Atualizar senha</span>
+                <span className="text-sm m-0 p-0 text-blue-800">Atualizar senha</span>
               </Link>
             </CardHeader>
             <CardContent className="space-y-4">
@@ -249,8 +249,8 @@ export default function Dashboard() {
             </CardContent>
           </Card>
 
-          <div className="flex justify-end">
-            <Button type="submit" disabled={isLoading}>
+          <div className="flex  md:justify-end">
+            <Button type="submit" disabled={isLoading} className='w-full md:w-fit'>
               {isLoading ? (
                 <>
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
