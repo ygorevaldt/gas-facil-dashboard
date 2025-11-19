@@ -117,7 +117,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
     setUser(createUserRes.data);
     localStorage.setItem('user', JSON.stringify(createUserRes.data));
-    navigate('/dashboard');
+    navigate('/login');
   };
 
   const logout = async () => {
