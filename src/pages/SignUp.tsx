@@ -75,9 +75,10 @@ export default function SignUp() {
         description: 'Sua conta foi criada com sucesso.',
       });
     } catch (error) {
+      console.log(error)
       toast({
         title: 'Erro ao cadastrar',
-        description: 'Tente novamente mais tarde.',
+        description: error.response?.data?.issues?.[0]?.message ?? 'Tente novamente mais tarde.',
         variant: 'destructive',
       });
     } finally {
