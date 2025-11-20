@@ -99,6 +99,29 @@ Desenvolvido por Ygor Evaldt
 
 🐙 GitHub: https://github.com/ygorevaldt
 
-## 📜 Licença
+## � Instalação e Execução
+
+Siga os passos abaixo para rodar o projeto localmente:
+
+```bash
+# Clone o repositório
+git clone https://github.com/ygorevaldt/gas-facil-dashboard.git
+
+# Acesse a pasta do projeto
+cd gas-facil-dashboard
+
+# Instale as dependências
+npm install
+
+# Configure as variáveis de ambiente
+cp .env.example .env
+
+# Inicie o servidor de desenvolvimento
+npm run dev
+```
+
+A aplicação estará disponível em `http://localhost:5173` (ou outra porta indicada no terminal).
+
+## �📜 Licença
 
 Este projeto está sob a Licença MIT.
