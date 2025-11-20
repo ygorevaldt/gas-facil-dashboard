@@ -76,9 +76,13 @@ export default function SignUp() {
       });
     } catch (error) {
       console.log(error)
+      const description =
+        error.response?.data?.issues?.[0]?.message
+        ?? error.response?.data?.message
+        ?? 'Tente novamente mais tarde.'
       toast({
         title: 'Erro ao cadastrar',
-        description: error.response?.data?.issues?.[0]?.message ?? 'Tente novamente mais tarde.',
+        description,
         variant: 'destructive',
       });
     } finally {
